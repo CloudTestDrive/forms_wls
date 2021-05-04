@@ -1,0 +1,9 @@
+## <INSTALL FORMS>
+# Add a line at the end of /etc/fstab. "\$" jump to the end of the file.  "a" is for append.
+mount_software=$(sudo su oracle -c 'python /opt/scripts/databag.py mount_software')
+mkdir /mnt/software
+sudo sed -i -e "\$a${mount_software} /mnt/software    nfs    defaults   0   0" /etc/fstab
+mount /mnt/software
+
+/mnt/software/install/bin/install_part1.sh
+## </INSTALL FORMS>

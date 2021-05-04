@@ -1,0 +1,4 @@
+export ORACLE_HOME=$MW_HOME
+alias cdo='cd $ORACLE_HOME'
+alias domain='cd $DOMAIN_HOME'
+alias formsweb='cd $DOMAIN_HOME/config/fmwconfig/servers/WLS_FORMS/applications/formsapp_12.2.1/config'

@@ -1,0 +1,5 @@
+lb_cookie_session_persistence_configuration {
+    cookie_name = "LB_FORMS_COOKIE"
+    is_secure = false
+    is_http_only = false
+}
