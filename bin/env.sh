@@ -6,12 +6,12 @@ cd $DIR
 #                      (4 due to limitation of RCU prefix to 12 characters)
 export PREFIX=oblg
 # Used during the creation of the ATP database
-export TF_VAR_db_password=BEstrO0ng_#12
+export TF_VAR_db_password=yourpwd
 
 # General OCI settings
-export TF_VAR_tenancy_ocid=ocid1.tenancy.oc1..aaaaaaaatcgoxmy5ygsarzpb6wtr7slzviel2vczxgaabcdefghijklm
-export TF_VAR_user_ocid=ocid1.user.oc1..aaaaaaaarkxpe2xf5yx6vhangt4okjub2dczqx2cpes3dabcdefghijklm
-export TF_VAR_compartment_ocid=ocid1.compartment.oc1..aaaaaaaa5dhfjfsbdcz5ikajnlsjqufpjooywjdmac5dabcdefghijklm
+export TF_VAR_tenancy_ocid=ocid1.tenancy.oc1..aaaaaaaaabcdefghijklm
+export TF_VAR_user_ocid=ocid1.user.oc1..aaaaaaaaabcdefghijklm
+export TF_VAR_compartment_ocid=ocid1.compartment.oc1..aaaaaaaaabcdefghijklm
 export TF_VAR_fingerprint=$(cat ~/.oci/oci_api_key_fingerprint)
 export TF_VAR_private_key_path=~/.oci/oci_api_key.pem
 export TF_VAR_ssh_public_key=$(cat ~/.ssh/id_rsa.pub)
@@ -19,24 +19,24 @@ export TF_VAR_ssh_private_key=$(cat ~/.ssh/id_rsa)
 export TF_VAR_region=eu-frankfurt-1
 
 # WLS_STACK 
-export TF_VAR_wls_admin_password_ocid=ocid1.vaultsecret.oc1.eu-frankfurt-1.amaaaaaasu25dsyaa5gk4nzbcjpbex4uehuropwf4r25abcdefghijklm
-export TF_VAR_atp_db_password_ocid=ocid1.vaultsecret.oc1.eu-frankfurt-1.amaaaaaasu25dsyax6tclkwwrflvj356givw7uegfmbxabcdefghijklm
+export TF_VAR_wls_admin_password_ocid=ocid1.vaultsecret.oc1.eu-frankfurt-1.aaaaaaaaabcdefghijklm
+export TF_VAR_atp_db_password_ocid=ocid1.vaultsecret.oc1.eu-frankfurt-1.aaaaaaaaabcdefghijklm
 export TF_VAR_prefix=$PREFIX
 export TF_VAR_install_mode=ATP
 export TF_VAR_wls_node_count=1
 
 # DNS
-# export TF_VAR_dns_zone_name_or_id=ocid1.dns-zone.oc1..408c278890a140fb86642550af6dd978
+# export TF_VAR_dns_zone_name_or_id=ocid1.dns-zone.oc1..aaaaaaaaabcdefghijklm
 # export TF_VAR_dns_build=${PREFIX}build.orablog.org
 # export TF_VAR_dns_lb=${PREFIX}lb.orablog.org
 
 # IDCS
 export TF_VAR_is_idcs_selected=false	
-export TF_VAR_idcs_tenant=idcs-cedcabd3bef6418c96358b5a7a20a437
-export TF_VAR_idcs_client_id=24bfdc1ea5eb4b00a13e4393e90bc1ac
-export TF_VAR_idcs_client_secret_ocid=ocid1.vaultsecret.oc1.eu-frankfurt-1.amaaaaaasu25dsyanag377c5mtxo6wffski6rjjupjxukjkxrxjwulg6xvgq
-# Client ID 24bfdc1ea5eb4b00a13e4393e90bc1ac
-# Client Secret 3449b273-2602-4844-a810-e39e9f8a991d
+export TF_VAR_idcs_tenant=idcs-aaaaaaaaabcdefghijklm
+export TF_VAR_idcs_client_id=aaaaaaaaabcdefghijklm
+export TF_VAR_idcs_client_secret_ocid=ocid1.vaultsecret.oc1.eu-frankfurt-1.aaaaaaaaabcdefghijklm
+# Client ID aaaaaaaaabcdefghijklm
+# Client Secret 123456-123456-123456-123456
 
 # read from edelivery/terraform.tfstate
 if [ -f "terraform/edelivery/terraform.tfstate" ]; then
