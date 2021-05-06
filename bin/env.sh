@@ -10,10 +10,7 @@ export TF_VAR_db_password=yourpwd
 
 # General OCI settings
 export TF_VAR_tenancy_ocid=ocid1.tenancy.oc1..aaaaaaaaabcdefghijklm
-export TF_VAR_user_ocid=ocid1.user.oc1..aaaaaaaaabcdefghijklm
 export TF_VAR_compartment_ocid=ocid1.compartment.oc1..aaaaaaaaabcdefghijklm
-export TF_VAR_fingerprint=$(cat ~/.oci/oci_api_key_fingerprint)
-export TF_VAR_private_key_path=~/.oci/oci_api_key.pem
 export TF_VAR_ssh_public_key=$(cat ~/.ssh/id_rsa.pub)
 export TF_VAR_ssh_private_key=$(cat ~/.ssh/id_rsa)
 export TF_VAR_region=eu-frankfurt-1

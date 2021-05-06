@@ -6,12 +6,15 @@ variable "tenancy_ocid" {
 }
 
 variable "user_ocid" {
+  default = ""
 }
 
 variable "fingerprint" {
+  default = ""
 }
 
 variable "private_key_path" {
+  default = ""
 }
 
 variable "region" {
@@ -133,14 +136,18 @@ variable "dns_build" {
 // —————————————————————————————————
 
 variable "vcn" {
+  default = ""
 }
 
 variable "subnet" {
+  default = ""
 }
 
 variable "export_set" {
+  default = ""
 }
 
 variable "mount_target_ip_address" {
+  default = ""
 }
 
