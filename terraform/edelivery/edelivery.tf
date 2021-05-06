@@ -334,12 +334,12 @@ resource "oci_database_autonomous_database" "orablog_atp" {
 
 // Copy the wallet to ../../wallet.zip
 resource "local_file" "autonomous_database_wallet_file" {
-  content_base64 = data.oci_database_autonomous_database_wallet.autonomous_database_wallet[0].content
+  content_base64 = oci_database_autonomous_database_wallet.autonomous_database_wallet[0].content
   filename       = "../../${var.prefix}atp_wallet.zip"
   count = var.install_mode == "ATP" ? 1 : 0
 }
 
-data "oci_database_autonomous_database_wallet" "autonomous_database_wallet" {
+resource "oci_database_autonomous_database_wallet" "autonomous_database_wallet" {
   autonomous_database_id = oci_database_autonomous_database.orablog_atp[0].id
   password               = var.db_password
   base64_encode_content  = "true"
